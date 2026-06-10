@@ -1,0 +1,96 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "question": "Ao ouvir o alerta de invasão alienígena, qual sua primeira ação?",
+      "options": [
+        "Entrar em pânico",
+        "Buscar informações confiáveis",
+        "Ignorar tudo"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "question": "Você encontra um objeto alienígena.",
+      "options": [
+        "Tocar imediatamente",
+        "Analisar à distância",
+        "Levar para casa"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 3,
+      "question": "Sua cidade perdeu energia elétrica.",
+      "options": [
+        "Preparar suprimentos",
+        "Esperar sem agir",
+        "Entrar em desespero"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 4,
+      "question": "Você vê luzes estranhas no céu.",
+      "options": [
+        "Investigar sozinho",
+        "Observar com cautela",
+        "Seguir as luzes"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 5,
+      "question": "Um alienígena oferece ajuda.",
+      "options": ["Confiar imediatamente", "Analisar intenções", "Segui-lo"],
+      "correct": 1
+    },
+    {
+      "id": 6,
+      "question": "Você encontra um bunker abandonado.",
+      "options": ["Entrar cuidadosamente", "Ignorar", "Destruir a entrada"],
+      "correct": 0
+    },
+    {
+      "id": 7,
+      "question": "Seu melhor amigo foi abduzido.",
+      "options": [
+        "Tentar resgatá-lo sozinho",
+        "Pedir ajuda e criar um plano",
+        "Ignorar a situação"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 8,
+      "question": "Você intercepta uma mensagem alienígena.",
+      "options": [
+        "Traduzir cuidadosamente",
+        "Apagar imediatamente",
+        "Responder sem entender"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 9,
+      "question": "A invasão parece estar terminando.",
+      "options": [
+        "Continuar atento",
+        "Relaxar completamente",
+        "Se expor ao perigo"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 10,
+      "question": "Última chance de escapar da invasão.",
+      "options": [
+        "Fugir estrategicamente",
+        "Esperar",
+        "Voltar para a zona de risco"
+      ],
+      "correct": 0
+    }
+  ]
+}

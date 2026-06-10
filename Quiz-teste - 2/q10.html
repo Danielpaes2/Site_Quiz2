@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pergunta 10</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+
+  <body>
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <span class="progress-percent">0%</span>
+    </div>
+
+    <div id="space" style="background-image: url('img/Background.png');"></div>
+
+    <div class="question-layout">
+      <div>
+        <img src="./img/spaceship.gif" class="spaceship" />
+      </div>
+
+      <div class="question-box">
+        <h1 class="question-title">Última chance de escapar da invasão.</h1>
+
+        <button class="option" onclick="select(0, true)">
+          Fugir estrategicamente
+        </button>
+
+        <button class="option" onclick="select(1, false)">Esperar</button>
+
+        <button class="option" onclick="select(2, false)">
+          Voltar para a zona de risco
+        </button>
+      </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/animeEffects.js"></script>
+
+    <script>
+      renderProgress();
+
+      function select(selected, correct) {
+        answerQuestion(10, selected, correct);
+
+        nextQuestion("resultado.html");
+      }
+    </script>
+  </body>
+</html>
