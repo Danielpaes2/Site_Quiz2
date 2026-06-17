@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Resultado</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+
+  <body>
+    <div id="space" style="background-image: url('img/DD.gif');"></div>
+
+    <div class="result-screen">
+      <h1 class="result-title">QUIZ FINISHED</h1>
+
+      <h2 id="scoreText"></h2>
+
+      <div class="chart-container">
+        <canvas id="resultChart"> </canvas>
+      </div>
+
+      <h3 id="survivalRank"></h3>
+
+      <button onclick="restartQuiz()">TRY AGAIN</button>
+    </div>
+
+    <script src="js/quiz.js"></script>
+
+    <script>
+      const savedAnswers =
+        JSON.parse(localStorage.getItem("quizAnswers")) || {};
+
+      const score = calculateScore();
+
+      document.getElementById("scoreText").innerHTML = `${score}/10`;
+
+      const chartContainer = document.querySelector(".chart-container");
+      const resultChart = document.getElementById("resultChart");
+
+      if (Object.keys(savedAnswers).length === 0) {
+        document.getElementById("survivalRank").innerHTML =
+          "Nenhuma resposta registrada.";
+        chartContainer.style.display = "none";
+      } else {
+        let rank = "";
+
+        if (score <= 3) {
+          rank = "☠️ CAPTURADO";
+        } else if (score <= 6) {
+          rank = "🛸 SOBREVIVEU POR POUCO";
+        } else if (score <= 8) {
+          rank = "🚀 SOBREVIVENTE";
+        } else {
+          rank = "👑 LENDA GALÁCTICA";
+        }
+
+        document.getElementById("survivalRank").innerHTML = rank;
+
+        const ctx = resultChart.getContext("2d");
+
+        new Chart(ctx, {
+          type: "doughnut",
+
+          data: {
+            labels: ["Acertos", "Erros"],
+
+            datasets: [
+              {
+                data: [score, 10 - score],
+                backgroundColor: ["#00ff88", "#800080"],
+              },
+            ],
+          },
+
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                labels: {
+                  color: "white",
+                },
+              },
+            },
+          },
+        });
+      }
+
+      saveScore();
+
+      anime({
+        targets: ".result-title",
+
+        scale: [0, 1],
+
+        rotate: [-20, 0],
+
+        duration: 2000,
+
+        easing: "easeOutElastic",
+      });
+
+      function restartQuiz() {
+        resetQuiz();
+
+        window.location.href = "home.html";
+      }
+    </script>
+  </body>
+</html>

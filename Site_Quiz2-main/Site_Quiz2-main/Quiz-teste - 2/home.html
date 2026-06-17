@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+    <div id="space"></div>
+
+    <div class="home-wrapper">
+      <div class="home-left">
+        <img src="./img/Quiz (6).gif" class="floating-ship" />
+
+        <h1>Você sobreviveria a uma invasão alienígena?</h1>
+
+        <div class="name-box">
+          <input id="playerName" placeholder="Enter your name" />
+
+          <button id="savePlayer">OK</button>
+        </div>
+      </div>
+
+      <div class="home-right">
+        <div class="ranking-box">
+          <h2>Ranking</h2>
+
+          <ul id="rankingList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/ranking.js"></script>
+  </body>
+</html>

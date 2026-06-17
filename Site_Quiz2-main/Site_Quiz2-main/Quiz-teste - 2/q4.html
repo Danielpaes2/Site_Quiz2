@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Pergunta 4</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+
+  <body>
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <span class="progress-percent">0%</span>
+    </div>
+
+    <div id="space" style="background-image: url('img/Background.png');"></div>
+
+    <div class="question-layout">
+   
+      <div class="question-box">
+        <h1 class="question-title">Se um ET perguntasse quem manda na Terra, eu:</h1>
+
+        <button class="option" onclick="select(0, false)">
+          Apontaria para um pombo aleatório
+
+        <button class="option" onclick="select(1, true)">
+           Explicaria que existem vários governos e países
+        </button>
+
+        <button class="option" onclick="select(2, false)">
+          Comentaria sobre líderes e organizações internacionais
+        </button>
+      </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/animeEffects.js"></script>
+
+    <script>
+      renderProgress();
+
+      function select(selected, correct) {
+        answerQuestion(4, selected, correct);
+
+        nextQuestion("q5.html");
+      }
+    </script>
+  </body>
+</html>
