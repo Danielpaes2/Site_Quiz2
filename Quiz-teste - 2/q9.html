@@ -3,20 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Pergunta 9</title>
-
     <link rel="stylesheet" href="css/style.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
 
-  <body>
+  <body data-requires-player="true">
     <div class="progress-container">
       <div class="progress-track">
         <div id="progressBar"></div>
@@ -24,39 +15,28 @@
       <span class="progress-percent">0%</span>
     </div>
 
-    <div id="space" style="background-image: url('img/Background.png');"></div>
+    <div id="space" style="background-image: url('./img/Background2.gif');"></div>
 
-    <div class="question-layout">
-      <div>
-        <img src="./img/spaceship.gif" class="spaceship" />
-      </div>
+    <main class="question-layout">
+      <img src="./img/Quiz (4).gif" class="spaceship" alt="Nave espacial" />
 
-      <div class="question-box">
-        <h1 class="question-title">A invasão parece estar terminando.</h1>
+      <section class="question-box" aria-labelledby="questionTitle">
+        <p class="question-counter">Pergunta 9/10</p>
+        <h1 id="questionTitle" class="question-title">A invas&atilde;o parece estar terminando.</h1>
 
-        <button class="option" onclick="select(0, true)">
-          Continuar atento
-        </button>
-
-        <button class="option" onclick="select(1, false)">
-          Relaxar completamente
-        </button>
-
-        <button class="option" onclick="select(2, false)">
-          Se expor ao perigo
-        </button>
-      </div>
-    </div>
+          <button class="option" type="button" onclick="select(0, true)">Continuar atento</button>
+          <button class="option" type="button" onclick="select(1, false)">Relaxar completamente</button>
+          <button class="option" type="button" onclick="select(2, false)">Se expor ao perigo</button>
+      </section>
+    </main>
 
     <script src="js/quiz.js"></script>
     <script src="js/animeEffects.js"></script>
-
     <script>
       renderProgress();
 
       function select(selected, correct) {
         answerQuestion(9, selected, correct);
-
         nextQuestion("q10.html");
       }
     </script>

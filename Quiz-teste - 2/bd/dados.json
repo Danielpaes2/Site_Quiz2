@@ -2,95 +2,113 @@
   "quiz": [
     {
       "id": 1,
-      "question": "Ao ouvir o alerta de invasão alienígena, qual sua primeira ação?",
+      "question": "Os sistemas de comunicação entram em colapso após os primeiros ataques. Você recebe informações contraditórias sobre áreas seguras. O que faz?",
       "options": [
-        "Entrar em pânico",
-        "Buscar informações confiáveis",
-        "Ignorar tudo"
+        "Segue imediatamente a rota indicada pela maioria das pessoas.",
+        "Permanece onde está até obter informações mais confiáveis.",
+        "Cruza diferentes fontes de informação antes de decidir para onde ir.",
+        "Ignora os avisos e tenta encontrar uma solução por conta própria."
       ],
-      "correct": 1
+      "correct": 2
     },
     {
       "id": 2,
-      "question": "Você encontra um objeto alienígena.",
+      "question": "Você percebe que os alienígenas parecem detectar grandes concentrações de pessoas. Como reage?",
       "options": [
-        "Tocar imediatamente",
-        "Analisar à distância",
-        "Levar para casa"
+        "Procura um grupo pequeno e organizado para aumentar as chances de sobrevivência.",
+        "Continua em uma grande comunidade pela sensação de proteção coletiva.",
+        "Isola-se completamente para evitar qualquer risco.",
+        "Move-se constantemente de um lugar para outro sem criar vínculos."
       ],
-      "correct": 1
+      "correct": 0
     },
     {
       "id": 3,
-      "question": "Sua cidade perdeu energia elétrica.",
+      "question": "Durante uma fuga, você encontra equipamentos úteis, mas só consegue carregar parte deles. O que escolhe priorizar?",
       "options": [
-        "Preparar suprimentos",
-        "Esperar sem agir",
-        "Entrar em desespero"
+        "Ferramentas que possam resolver diversos problemas diferentes.",
+        "Recursos de conforto imediato, como roupas extras e itens pessoais.",
+        "Equipamentos de defesa, mesmo sem saber usá-los muito bem.",
+        "O máximo possível de comida e água."
       ],
       "correct": 0
     },
     {
       "id": 4,
-      "question": "Você vê luzes estranhas no céu.",
+      "question": "Um desconhecido pede ajuda para se juntar ao seu grupo. Os recursos estão limitados. Qual sua decisão?",
       "options": [
-        "Investigar sozinho",
-        "Observar com cautela",
-        "Seguir as luzes"
+        "Aceita imediatamente por compaixão.",
+        "Recusa para proteger os recursos do grupo.",
+        "Avalia as habilidades e o comportamento da pessoa antes de decidir.",
+        "Aceita temporariamente, observando se ela representa risco."
       ],
-      "correct": 1
+      "correct": 2
     },
     {
       "id": 5,
-      "question": "Um alienígena oferece ajuda.",
-      "options": ["Confiar imediatamente", "Analisar intenções", "Segui-lo"],
-      "correct": 1
+      "question": "Você descobre que os alienígenas utilizam padrões previsíveis de patrulha. Como utiliza essa informação?",
+      "options": [
+        "Compartilha apenas com seu grupo próximo.",
+        "Tenta divulgar para o maior número possível de sobreviventes.",
+        "Usa a informação para planejar rotas e operações cuidadosamente.",
+        "Não confia na descoberta e prefere não agir com base nela."
+      ],
+      "correct": 2
     },
     {
       "id": 6,
-      "question": "Você encontra um bunker abandonado.",
-      "options": ["Entrar cuidadosamente", "Ignorar", "Destruir a entrada"],
+      "question": "Após semanas de crise, o medo e a exaustão começam a afetar seu julgamento. O que faz para manter a lucidez?",
+      "options": [
+        "Cria uma rotina diária com horários e objetivos claros.",
+        "Distrai-se sempre que possível para não pensar na situação.",
+        "Toma decisões apenas por instinto.",
+        "Deixa que outros decidam por você."
+      ],
       "correct": 0
     },
     {
       "id": 7,
-      "question": "Seu melhor amigo foi abduzido.",
+      "question": "Seu grupo encontra uma instalação abandonada que pode servir de abrigo, mas também pode estar sendo monitorada. Como procede?",
       "options": [
-        "Tentar resgatá-lo sozinho",
-        "Pedir ajuda e criar um plano",
-        "Ignorar a situação"
+        "Entra imediatamente para aproveitar a oportunidade.",
+        "Observa o local por um período antes de ocupá-lo.",
+        "Evita qualquer risco e continua procurando outro lugar.",
+        "Envia alguém para explorar sozinho."
       ],
       "correct": 1
     },
     {
       "id": 8,
-      "question": "Você intercepta uma mensagem alienígena.",
+      "question": "Os alienígenas parecem demonstrar inteligência e capacidade de comunicação. Qual abordagem considera mais racional?",
       "options": [
-        "Traduzir cuidadosamente",
-        "Apagar imediatamente",
-        "Responder sem entender"
+        "Assumir que qualquer contato é perigoso e evitá-lo.",
+        "Tentar estabelecer comunicação sem preparação.",
+        "Estudar seu comportamento antes de decidir qualquer forma de contato.",
+        "Preparar uma emboscada preventiva."
       ],
-      "correct": 0
+      "correct": 2
     },
     {
       "id": 9,
-      "question": "A invasão parece estar terminando.",
+      "question": "Você recebe a chance de escapar sozinho para uma área segura, mas isso significa abandonar pessoas que dependem de você. O que faz?",
       "options": [
-        "Continuar atento",
-        "Relaxar completamente",
-        "Se expor ao perigo"
+        "Vai sozinho, priorizando sua própria sobrevivência.",
+        "Fica para ajudar, independentemente do risco.",
+        "Procura uma solução que aumente as chances de todos sobreviverem.",
+        "Decide com base nas probabilidades objetivas de sucesso."
       ],
-      "correct": 0
+      "correct": 2
     },
     {
       "id": 10,
-      "question": "Última chance de escapar da invasão.",
+      "question": "Após meses de invasão, surgem rumores de que a resistência humana está desenvolvendo uma estratégia eficaz. Qual é sua atitude?",
       "options": [
-        "Fugir estrategicamente",
-        "Esperar",
-        "Voltar para a zona de risco"
+        "Junta-se imediatamente à resistência.",
+        "Espera provas concretas antes de agir.",
+        "Tenta obter mais informações e avaliar os riscos.",
+        "Continua focado apenas na sua sobrevivência individual."
       ],
-      "correct": 0
+      "correct": 2
     }
   ]
 }

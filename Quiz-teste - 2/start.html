@@ -2,40 +2,24 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Start</title>
-
+    <title>Preparar Invas&atilde;o</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
-  <body>
-    <div id="space" style="background-image: url('img/Background.png');"></div>
+  <body data-requires-player="true">
+    <div id="space" style="background-image: url('./img/Background2.gif');"></div>
 
-    <div class="start-container">
-      <img src="./img/Quiz (21).gif" class="start-ship" />
+    <main class="start-container">
+      <img src="./img/Quiz (21).gif" class="start-ship" alt="Nave pronta para iniciar o quiz" />
 
-      <h1>PREPARE-SE PARA A INVASÃO</h1>
+      <p class="eyebrow">Nebulosa Quiz</p>
+      <h1>PREPARE-SE PARA A INVAS&Atilde;O</h1>
 
-      <p>Responda as perguntas e descubra se você sobreviveria.</p>
+      <p>Responda as perguntas e descubra se voc&ecirc; sobreviveria.</p>
 
-      <button onclick="location.href = 'q1.html'">START QUIZ</button>
-    </div>
+      <button type="button" onclick="location.href = 'q1.html'">START</button>
+    </main>
 
-    <script>
-      anime({
-        targets: ".start-ship",
-
-        translateY: [-50, 0],
-
-        opacity: [0, 1],
-
-        duration: 2000,
-
-        easing: "easeOutExpo",
-      });
-    </script>
+    <script src="js/quiz.js"></script>
   </body>
 </html>

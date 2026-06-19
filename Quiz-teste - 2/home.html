@@ -3,37 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Home</title>
-
+    <title>Nebulosa Quiz</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
-  <body>
-    <div id="space"></div>
+  <body class="game-home">
+    <div id="space" style="background-image: url('./img/Background2.gif');"></div>
 
-    <div class="home-wrapper">
-      <div class="home-left">
-        <img src="./img/Quiz (6).gif" class="floating-ship" />
+    <main class="home-wrapper">
+      <section class="home-left home-card">
+        <div class="home-status" aria-label="Status da miss&atilde;o">
+          <span>Sinal alien&iacute;gena</span>
+          <strong>Detectado</strong>
+        </div>
 
-        <h1>Você sobreviveria a uma invasão alienígena?</h1>
+        <div class="logo-lockup" aria-label="Nebulosa Quiz">
+          <span>Nebulosa</span>
+          <strong>Quiz</strong>
+        </div>
+
+        <img src="./img/Quiz (6).gif" class="floating-ship" alt="Nave do Quiz Nebulosa" />
+
+        <h1>Voc&ecirc; sobreviveria a uma invas&atilde;o alien&iacute;gena?</h1>
+
+        <p class="home-copy">
+          Entre na nave, responda sob press&atilde;o e descubra seu destino na gal&aacute;xia.
+        </p>
+
+        <div class="mission-tags" aria-label="Dados da miss&atilde;o">
+          <span>10 setores</span>
+          <span>Modo sobreviv&ecirc;ncia</span>
+          <span>Ranking ativo</span>
+        </div>
 
         <div class="name-box">
-          <input id="playerName" placeholder="Enter your name" />
-
-          <button id="savePlayer">OK</button>
+          <label for="playerName">Comandante</label>
+          <div class="name-actions">
+            <input id="playerName" type="text" placeholder="Digite seu codinome" autocomplete="name" />
+            <button id="savePlayer" type="button">START</button>
+          </div>
+          <p id="nameError" class="form-error" aria-live="polite"></p>
         </div>
-      </div>
+      </section>
 
-      <div class="home-right">
+      <aside class="home-right" aria-label="Ranking">
         <div class="ranking-box">
-          <h2>Ranking</h2>
+          <div class="ranking-header">
+            <div>
+              <p class="eyebrow">Hall da nave</p>
+              <h2>Ranking de Perfis</h2>
+            </div>
+            <span>PERFIS</span>
+          </div>
 
           <ul id="rankingList"></ul>
         </div>
-      </div>
-    </div>
+      </aside>
+    </main>
 
     <script src="js/ranking.js"></script>
   </body>

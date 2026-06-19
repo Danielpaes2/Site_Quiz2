@@ -2,119 +2,64 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resultado</title>
-
     <link rel="stylesheet" href="css/style.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
 
-  <body>
-    <div id="space" style="background-image: url('img/Background.png');"></div>
+  <body class="game-result" data-requires-player="true">
+    <div
+      id="space"
+      style="background-image: url(&quot;./img/Background2.gif&quot;)"
+    ></div>
 
-    <div class="result-screen">
-      <h1 class="result-title">QUIZ FINISHED</h1>
+    <main class="result-screen">
+      <section class="result-card" aria-labelledby="resultTitle">
+        <p class="eyebrow">Tela final de jogo</p>
+        <h1 id="resultTitle" class="result-title">
+          Relatorio de Sobrevivencia
+        </h1>
 
-      <h2 id="scoreText"></h2>
+        <h2 id="scoreText"></h2>
 
-      <div class="chart-container">
-        <canvas id="resultChart"> </canvas>
-      </div>
+        <div class="result-grid">
+          <div
+            class="result-stats rpg-character-card"
+            aria-label="Ficha do sobrevivente"
+          >
+            <div class="stat-card stat-rank">
+              <span>Perfil dominante</span>
+              <strong id="survivalRank"></strong>
+            </div>
+            <div class="rpg-avatar" id="profileIcon" aria-hidden="true">?</div>
+            <div class="rpg-traits" id="profileTraits"></div>
+          </div>
 
-      <h3 id="survivalRank"></h3>
+          <div class="chart-panel rpg-score-panel">
+            <p class="panel-title">Pontuacao visual</p>
+            <div
+              id="resultChart"
+              class="rpg-bars"
+              aria-label="Grafico de perfis"
+            ></div>
+          </div>
+        </div>
 
-      <button onclick="restartQuiz()">TRY AGAIN</button>
-    </div>
+        <div class="radar-panel">
+          <p class="panel-title">Radar RPG</p>
+          <div class="chartjs-frame" aria-label="Grafico RPG complementar">
+            <canvas id="profileChart"></canvas>
+          </div>
+        </div>
+
+        <p id="resultMessage" class="result-message"></p>
+
+        <button type="button" onclick="restartQuiz()">TRY AGAIN</button>
+      </section>
+    </main>
 
     <script src="js/quiz.js"></script>
-
-    <script>
-      const savedAnswers =
-        JSON.parse(localStorage.getItem("quizAnswers")) || {};
-
-      const score = calculateScore();
-
-      document.getElementById("scoreText").innerHTML = `${score}/10`;
-
-      const chartContainer = document.querySelector(".chart-container");
-      const resultChart = document.getElementById("resultChart");
-
-      if (Object.keys(savedAnswers).length === 0) {
-        document.getElementById("survivalRank").innerHTML =
-          "Nenhuma resposta registrada.";
-        chartContainer.style.display = "none";
-      } else {
-        let rank = "";
-
-        if (score <= 3) {
-          rank = "☠️ CAPTURADO";
-        } else if (score <= 6) {
-          rank = "🛸 SOBREVIVEU POR POUCO";
-        } else if (score <= 8) {
-          rank = "🚀 SOBREVIVENTE";
-        } else {
-          rank = "👑 LENDA GALÁCTICA";
-        }
-
-        document.getElementById("survivalRank").innerHTML = rank;
-
-        const ctx = resultChart.getContext("2d");
-
-        new Chart(ctx, {
-          type: "doughnut",
-
-          data: {
-            labels: ["Acertos", "Erros"],
-
-            datasets: [
-              {
-                data: [score, 10 - score],
-                backgroundColor: ["#00ff88", "#ff4444"],
-              },
-            ],
-          },
-
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                labels: {
-                  color: "white",
-                },
-              },
-            },
-          },
-        });
-      }
-
-      saveScore();
-
-      anime({
-        targets: ".result-title",
-
-        scale: [0, 1],
-
-        rotate: [-20, 0],
-
-        duration: 2000,
-
-        easing: "easeOutElastic",
-      });
-
-      function restartQuiz() {
-        resetQuiz();
-
-        window.location.href = "home.html";
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/result.js"></script>
   </body>
 </html>

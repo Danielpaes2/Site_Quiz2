@@ -1,39 +1,22 @@
 const fill = document.getElementById("loadingFill");
-
 const percent = document.getElementById("loadingPercent");
-
+const loadingContainer = document.querySelector(".loading-container");
 let progress = 0;
-
-anime({
-  targets: ".loading-title",
-  scale: [0.8, 1],
-  duration: 1500,
-  direction: "alternate",
-  loop: true,
-});
 
 const loading = setInterval(() => {
   progress++;
 
-  fill.style.width = progress + "%";
-
-  percent.innerHTML = progress + "%";
+  fill.style.width = `${progress}%`;
+  percent.textContent = `${progress}%`;
 
   if (progress >= 100) {
     clearInterval(loading);
+    loadingContainer.style.transition = "opacity 0.45s ease, transform 0.45s ease";
+    loadingContainer.style.opacity = "0";
+    loadingContainer.style.transform = "translateY(-10px)";
 
-    anime({
-      targets: ".loading-container",
-
-      opacity: [1, 0],
-
-      duration: 800,
-
-      easing: "easeInExpo",
-
-      complete: () => {
-        window.location.href = "home.html";
-      },
-    });
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 450);
   }
-}, 25);
+}, 18);

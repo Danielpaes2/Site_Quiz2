@@ -3,53 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Nebulosa Quiz</title>
-
     <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body class="loading-body">
-    <div class="loading-container">
+    <main class="loading-container">
       <h1 class="loading-title">NEBULOSA QUIZ</h1>
 
       <p class="loading-subtitle">Inicializando sistemas...</p>
 
-      <div class="loading-bar">
+      <div class="loading-bar" aria-label="Carregamento">
         <div id="loadingFill"></div>
       </div>
 
       <h2 id="loadingPercent">0%</h2>
-    </div>
+    </main>
 
-    <script>
-      let progress = 0;
-
-      const fill = document.getElementById("loadingFill");
-
-      const percent = document.getElementById("loadingPercent");
-
-      const loading = setInterval(() => {
-        progress++;
-
-        fill.style.width = progress + "%";
-
-        percent.innerHTML = progress + "%";
-
-        if (progress >= 100) {
-          clearInterval(loading);
-
-          window.location.href = "home.html";
-        }
-      }, 25);
-    </script>
+    <script src="js/loading.js"></script>
   </body>
 </html>
