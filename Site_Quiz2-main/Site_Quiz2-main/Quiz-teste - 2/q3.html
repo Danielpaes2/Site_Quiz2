@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Pergunta 3</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+
+  <body>
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <span class="progress-percent">0%</span>
+    </div>
+
+    <div id="space" style="background-image: url('img/Background.png');"></div>
+
+    <div class="question-layout">
+      <div>
+        <img src="./img/spaceship.gif" class="spaceship" />
+      </div>
+
+      <div class="question-box">
+        <h1 class="question-title">Os alienígenas pedem ajuda para encontrar água.</h1>
+
+        <button class="option" onclick="select(0, true)">
+           Tentaria fornecer informações úteis
+        </button>
+
+        <button class="option" onclick="select(1, false)">
+          Procuraria uma forma segura de ajudá-los
+        </button>
+
+        <button class="option" onclick="select(2, false)">
+          Entrar em desespero
+        </button>
+      </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/animeEffects.js"></script>
+
+    <script>
+      renderProgress();
+
+      function select(selected, correct) {
+        answerQuestion(3, selected, correct);
+
+        nextQuestion("q4.html");
+      }
+    </script>
+  </body>
+</html>

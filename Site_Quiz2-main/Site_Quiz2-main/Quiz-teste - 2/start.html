@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Start</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+  <body>
+   <div id="space" style="background-image: url('img/Marching\ Fleet\ by\ kirokaze.gif');"></div>
+
+    <div class="start-container">
+     
+
+      <h1>PREPARE-SE PARA A INVASÃO</h1>
+
+      <p>Responda as perguntas e descubra se você sobreviveria.</p>
+
+      <button onclick="location.href = 'q1.html'">START QUIZ</button>
+    </div>
+
+    <script>
+      anime({
+        targets: ".start-ship",
+
+        translateY: [-50, 0],
+
+        opacity: [0, 1],
+
+        duration: 2000,
+
+        easing: "easeOutExpo",
+      });
+    </script>
+  </body>
+</html>

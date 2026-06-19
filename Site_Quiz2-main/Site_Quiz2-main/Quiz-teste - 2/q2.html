@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Pergunta 2</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <span class="progress-percent">0%</span>
+    </div>
+
+    <div id="space" style="background-image: url('img/Background.png');"></div>
+
+    <div class="question-layout">
+      <div>
+        <img src="./img/spaceship.gif" class="spaceship" />
+      </div>
+
+      <div class="question-box">
+        <h1 class="question-title">Um alienígena fala uma língua estranha. O que eu faria?</h1>
+
+        <button class="option" onclick="select(0, false)">
+          Observaria seu comportamento com cuidado e respeito
+        </button>
+
+        <button class="option" onclick="select(1, true)">
+           Tentaria ajudar a traduzir a mensagem
+        </button>
+
+        <button class="option" onclick="select(2, false)">
+          Tentaria me comunicar usando gestos e sinais universais                                  
+        </button>
+      </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/animeEffects.js"></script>
+
+    <script>
+      renderProgress();
+
+      function select(selected, correct) {
+        answerQuestion(2, selected, correct);
+
+        nextQuestion("q3.html");
+      }
+    </script>
+  </body>
+</html>
